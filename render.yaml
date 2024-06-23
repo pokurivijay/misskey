@@ -42,14 +42,13 @@ services:
     healthCheckPath: /
     autoDeploy: true
 
+  - type: redis
+    name: misskey-redis
+    plan: standard
+
 databases:
   - name: misskey-db
     databaseName: misskey
     user: misskey
     password: your_password
-    plan: standard
-
-services:
-  - type: redis
-    name: misskey-redis
     plan: standard
